@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "9a822fcd-98a0-4951-829e-6829e5d7d4b1"
+      }
+    },
+    "android": {
+      "package": "com.mohammed_mydeen.projecthc"
+    }
+  }
+}
