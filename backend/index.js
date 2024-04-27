@@ -1,12 +1,4 @@
-// // index.js
-// const express = require('express');
-// const twilio = require('twilio');
-// const mongoose = require('mongoose');
-// const dotenv = require('dotenv');
-// const bodyParser = require('body-parser');
 
-// // Load environment variables from .env file
-// dotenv.config();
 
 const express = require('express');
 const twilio = require('twilio');
@@ -87,6 +79,7 @@ app.post('/api/verify-otp', async (req, res) => {
         if (otp === storedOTP.otp) {
             res.status(200).json({ success: true, message: 'OTP verified successfully' });
         } else {
+            console.error('Invalid OTP entered for phoneNumber:', phoneNumber);
             res.status(400).json({ success: false, error: 'Invalid OTP' });
         }
     } catch (error) {
